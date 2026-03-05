@@ -6,4 +6,5 @@ def matrix_transpose(A):
     """
     # Write code here
     A = np.asarray(A, dtype = float)
-    return A.T
+    # the dot function of np
+    return A.T 

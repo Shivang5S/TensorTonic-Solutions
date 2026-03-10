@@ -6,13 +6,4 @@ def leaky_relu(x, alpha=0.01):
     """
     # Write code here
     x = np.asarray(x)
-    res = []
-
-    for x0 in x:
-        if x0 >= 0:
-            res.append(x0)
-        else:
-            res.append(alpha * x0)
-
-    res = np.asarray(res)
-    return res
+    return np.where(x >= 0, x, alpha * x)

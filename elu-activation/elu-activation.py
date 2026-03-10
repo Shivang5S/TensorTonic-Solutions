@@ -6,10 +6,6 @@ def elu(x, alpha):
     # Write code here
     res = []
     for x0 in x:
-        if x0 > 0:
-            res.append(x0)
-
-        else:
-            res.append(alpha * (np.exp(x0) - 1))
-
+        res.append(np.where(x0 > 0, x0, alpha * (np.exp(x0) - 1)))
+    
     return res

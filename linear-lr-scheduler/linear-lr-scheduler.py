@@ -7,9 +7,6 @@ def linear_lr(step, total_steps, initial_lr, final_lr=0.0, warmup_steps=0) -> fl
         if step >= total_steps:
             return float(final_lr)
             
-        # if total_steps == 0:
-        #     return float(initial_lr)
-            
         return float(final_lr + ((initial_lr - final_lr)*(total_steps - step))/(total_steps))
 
     if step == 0:

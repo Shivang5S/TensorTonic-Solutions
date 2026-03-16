@@ -18,4 +18,5 @@ def covariance_matrix(X):
     # That, above is broadcasting, np aligns shapes from the right
 
     return (X.T @ X)/(N - 1)
+
     
